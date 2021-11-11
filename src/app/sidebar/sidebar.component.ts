@@ -9,17 +9,17 @@ export interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard',     title: 'Dashboard',                icon:'nc-bank',       class: '' },
-    { path: '/icons',         title: 'Management Pacienți',      icon:'nc-diamond',    class: '' },
-    { path: '/table2',          title: 'Consultații',              icon:'nc-pin-3',      class: '' },
-    { path: '/maps',          title: 'Program de lucru',         icon:'nc-pin-3',      class: '' },
-    { path: '/maps',          title: 'Consultații',              icon:'nc-pin-3',      class: '' },
-    { path: '/maps',          title: 'Management saloane',       icon:'nc-pin-3',      class: '' },
-    { path: '/notifications', title: 'Notifications',            icon:'nc-bell-55',    class: '' },
-    { path: '/user',          title: 'User Profile',             icon:'nc-single-02',  class: '' },
-    { path: '/table',         title: 'Table List',               icon:'nc-tile-56',    class: '' },
-    { path: '/typography',    title: 'Typography',               icon:'nc-caps-small', class: '' },
-    { path: '/upgrade',       title: 'Upgrade to PRO',           icon:'nc-spaceship',  class: 'active-pro' },
+    { path: '/dashboard',                   title: 'Dashboard',                icon:'nc-chart-pie-36',       class: '' },
+    { path: '/table',                       title: 'Management Pacienți',      icon:'nc-badge',              class: '' },
+    { path: '/user',                        title: 'Consultații',              icon:'nc-sound-wave',         class: '' },
+    { path: '/programDeLucru',              title: 'Program de lucru',         icon:'nc-calendar-60',        class: '' },
+    { path: '/managementSaloane',           title: 'Management Saloane',       icon:'nc-layout-11',          class: '' },
+    { path: '/notifications',               title: 'Notifications',            icon:'nc-bell-55',            class: '' },
+    { path: '/user',                        title: 'User Profile',             icon:'nc-circle-10',          class: '' },
+    { path: '/icon',                        title: 'Icons',                    icon:'nc-diamond',            class: '' },
+    // { path: '/table',         title: 'Table List',               icon:'nc-tile-56',    class: '' },
+    // { path: '/typography',    title: 'Typography',               icon:'nc-caps-small', class: '' },
+    // { path: '/upgrade',       title: 'Upgrade to PRO',           icon:'nc-spaceship',  class: 'active-pro' },
 ];
 
 @Component({
