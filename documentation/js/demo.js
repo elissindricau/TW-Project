@@ -18,131 +18,131 @@ demo = {
 
     },
 
-    initGoogleMaps: function(){
+    // initGoogleMaps: function(){
 
-    // Satellite Map
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-            zoom: 3,
-            scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-            center: myLatlng,
-             mapTypeId: google.maps.MapTypeId.SATELLITE
-        }
+    // // Satellite Map
+    //     var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+    //     var mapOptions = {
+    //         zoom: 3,
+    //         scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+    //         center: myLatlng,
+    //          mapTypeId: google.maps.MapTypeId.SATELLITE
+    //     }
 
-        var map = new google.maps.Map(document.getElementById("satelliteMap"), mapOptions);
+    //     var map = new google.maps.Map(document.getElementById("satelliteMap"), mapOptions);
 
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title:"Satellite Map!"
-        });
+    //     var marker = new google.maps.Marker({
+    //         position: myLatlng,
+    //         title:"Satellite Map!"
+    //     });
 
-        marker.setMap(map);
-
-
-    },
-
-    initSmallGoogleMaps: function(){
-
-        // Regular Map
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-            zoom: 8,
-            center: myLatlng,
-            scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-        }
-
-        var map = new google.maps.Map(document.getElementById("regularMap"), mapOptions);
-
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title:"Regular Map!"
-        });
-
-        marker.setMap(map);
+    //     marker.setMap(map);
 
 
-        // Custom Skin & Settings Map
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-            zoom: 13,
-            center: myLatlng,
-            scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-            disableDefaultUI: true, // a way to quickly hide all controls
-            zoomControl: true,
-            styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+    // },
 
-        }
+    // initSmallGoogleMaps: function(){
 
-        var map = new google.maps.Map(document.getElementById("customSkinMap"), mapOptions);
+    //     // Regular Map
+    //     var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+    //     var mapOptions = {
+    //         zoom: 8,
+    //         center: myLatlng,
+    //         scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+    //     }
 
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title:"Custom Skin & Settings Map!"
-        });
+    //     var map = new google.maps.Map(document.getElementById("regularMap"), mapOptions);
 
-        marker.setMap(map);
+    //     var marker = new google.maps.Marker({
+    //         position: myLatlng,
+    //         title:"Regular Map!"
+    //     });
 
-    },
+    //     marker.setMap(map);
 
 
-    initVectorMap: function(){
-         var mapData = {
-                "AU": 760,
-                "BR": 550,
-                "CA": 120,
-                "DE": 1300,
-                "FR": 540,
-                "GB": 690,
-                "GE": 200,
-                "IN": 200,
-                "RO": 600,
-                "RU": 300,
-                "US": 2920,
-            };
+    //     // Custom Skin & Settings Map
+    //     var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+    //     var mapOptions = {
+    //         zoom: 13,
+    //         center: myLatlng,
+    //         scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+    //         disableDefaultUI: true, // a way to quickly hide all controls
+    //         zoomControl: true,
+    //         styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
 
-            $('#worldMap').vectorMap({
-                map: 'world_mill_en',
-                backgroundColor: "transparent",
-                zoomOnScroll: false,
-                regionStyle: {
-                    initial: {
-                        fill: '#e4e4e4',
-                        "fill-opacity": 0.9,
-                        stroke: 'none',
-                        "stroke-width": 0,
-                        "stroke-opacity": 0
-                    }
-                },
+    //     }
 
-                series: {
-                    regions: [{
-                        values: mapData,
-                        scale: ["#AAAAAA","#444444"],
-                        normalizeFunction: 'polynomial'
-                    }]
-                },
-            });
-	},
+    //     var map = new google.maps.Map(document.getElementById("customSkinMap"), mapOptions);
 
-    initFullScreenGoogleMap: function(){
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-          zoom: 13,
-          center: myLatlng,
-          scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-          styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+    //     var marker = new google.maps.Marker({
+    //         position: myLatlng,
+    //         title:"Custom Skin & Settings Map!"
+    //     });
 
-        }
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    //     marker.setMap(map);
 
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title:"Hello World!"
-        });
+    // },
 
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
-    },
+
+  //   initVectorMap: function(){
+  //        var mapData = {
+  //               "AU": 760,
+  //               "BR": 550,
+  //               "CA": 120,
+  //               "DE": 1300,
+  //               "FR": 540,
+  //               "GB": 690,
+  //               "GE": 200,
+  //               "IN": 200,
+  //               "RO": 600,
+  //               "RU": 300,
+  //               "US": 2920,
+  //           };
+
+  //           $('#worldMap').vectorMap({
+  //               map: 'world_mill_en',
+  //               backgroundColor: "transparent",
+  //               zoomOnScroll: false,
+  //               regionStyle: {
+  //                   initial: {
+  //                       fill: '#e4e4e4',
+  //                       "fill-opacity": 0.9,
+  //                       stroke: 'none',
+  //                       "stroke-width": 0,
+  //                       "stroke-opacity": 0
+  //                   }
+  //               },
+
+  //               series: {
+  //                   regions: [{
+  //                       values: mapData,
+  //                       scale: ["#AAAAAA","#444444"],
+  //                       normalizeFunction: 'polynomial'
+  //                   }]
+  //               },
+  //           });
+	// },
+
+    // initFullScreenGoogleMap: function(){
+    //     var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+    //     var mapOptions = {
+    //       zoom: 13,
+    //       center: myLatlng,
+    //       scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+    //       styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+
+    //     }
+    //     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    //     var marker = new google.maps.Marker({
+    //         position: myLatlng,
+    //         title:"Hello World!"
+    //     });
+
+    //     // To add the marker to the map, call setMap();
+    //     marker.setMap(map);
+    // },
 
     initOverviewDashboardDoc: function(){
         /*  **************** Chart Total Earnings - single line ******************** */
@@ -299,80 +299,80 @@ demo = {
         Chartist.Line('#chartTotalDownloads', dataDownloads, optionsDownloads);
     },
 
-    initStatsDashboard: function(){
+    // initStatsDashboard: function(){
 
-        var dataSales = {
-          labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
-          series: [
-             [287, 385, 490, 562, 594, 626, 698, 895, 952],
-            [67, 152, 193, 240, 387, 435, 535, 642, 744],
-            [23, 113, 67, 108, 190, 239, 307, 410, 410]
-          ]
-        };
+    //     var dataSales = {
+    //       labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
+    //       series: [
+    //          [287, 385, 490, 562, 594, 626, 698, 895, 952],
+    //         [67, 152, 193, 240, 387, 435, 535, 642, 744],
+    //         [23, 113, 67, 108, 190, 239, 307, 410, 410]
+    //       ]
+    //     };
 
-        var optionsSales = {
-          lineSmooth: false,
-          low: 0,
-          high: 1000,
-          showArea: true,
-          height: "245px",
-          axisX: {
-            showGrid: false,
-          },
-          lineSmooth: Chartist.Interpolation.simple({
-            divisor: 3
-          }),
-          showLine: true,
-          showPoint: false,
-        };
+    //     var optionsSales = {
+    //       lineSmooth: false,
+    //       low: 0,
+    //       high: 1000,
+    //       showArea: true,
+    //       height: "245px",
+    //       axisX: {
+    //         showGrid: false,
+    //       },
+    //       lineSmooth: Chartist.Interpolation.simple({
+    //         divisor: 3
+    //       }),
+    //       showLine: true,
+    //       showPoint: false,
+    //     };
 
-        var responsiveSales = [
-          ['screen and (max-width: 640px)', {
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0];
-              }
-            }
-          }]
-        ];
+    //     var responsiveSales = [
+    //       ['screen and (max-width: 640px)', {
+    //         axisX: {
+    //           labelInterpolationFnc: function (value) {
+    //             return value[0];
+    //           }
+    //         }
+    //       }]
+    //     ];
 
-        Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
+    //     Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
 
 
-        var data = {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          series: [
-            [542, 543, 520, 680, 653, 753, 326, 434, 568, 610, 756, 895],
-            [230, 293, 380, 480, 503, 553, 600, 664, 698, 710, 736, 795]
-          ]
-        };
+    //     var data = {
+    //       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    //       series: [
+    //         [542, 543, 520, 680, 653, 753, 326, 434, 568, 610, 756, 895],
+    //         [230, 293, 380, 480, 503, 553, 600, 664, 698, 710, 736, 795]
+    //       ]
+    //     };
 
-        var options = {
-            seriesBarDistance: 10,
-            axisX: {
-                showGrid: false
-            },
-            height: "245px"
-        };
+    //     var options = {
+    //         seriesBarDistance: 10,
+    //         axisX: {
+    //             showGrid: false
+    //         },
+    //         height: "245px"
+    //     };
 
-        var responsiveOptions = [
-          ['screen and (max-width: 640px)', {
-            seriesBarDistance: 5,
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0];
-              }
-            }
-          }]
-        ];
+    //     var responsiveOptions = [
+    //       ['screen and (max-width: 640px)', {
+    //         seriesBarDistance: 5,
+    //         axisX: {
+    //           labelInterpolationFnc: function (value) {
+    //             return value[0];
+    //           }
+    //         }
+    //       }]
+    //     ];
 
-        Chartist.Line('#chartActivity', data, options, responsiveOptions);
+    //     Chartist.Line('#chartActivity', data, options, responsiveOptions);
 
-        Chartist.Pie('#chartPreferences', {
-          labels: ['62%','32%','6%'],
-          series: [62, 32, 6]
-        });
-    },
+    //     Chartist.Pie('#chartPreferences', {
+    //       labels: ['62%','32%','6%'],
+    //       series: [62, 32, 6]
+    //     });
+    // },
 
     initChartsPage: function(){
         /*  **************** 24 Hours Performance - single line ******************** */
