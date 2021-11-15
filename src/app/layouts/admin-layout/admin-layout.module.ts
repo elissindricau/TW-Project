@@ -9,6 +9,7 @@ import { DashboardComponent }       from '../../pages/dashboard/dashboard.compon
 import { UserComponent }            from '../../pages/user/user.component';
 import { ConsultatiiComponent }            from '../../pages/consultatii/user.component';
 import { TableComponent }           from '../../pages/table/table.component';
+import { PacientComponent }           from '../../pages/pacientNou/pacient.component';
 import { TableProgramComponent }    from '../../pages/tableProgram/table.component';
 import { TypographyComponent }      from '../../pages/typography/typography.component';
 import { IconsComponent }           from '../../pages/icons/icons.component';
@@ -30,6 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ConsultatiiComponent,
     UserComponent,
     TableComponent,
+    PacientComponent,
     TableProgramComponent,
     UpgradeComponent,
     TypographyComponent,
