@@ -10,10 +10,10 @@ export interface RouteInfo {
 
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard',                   title: 'Dashboard',                icon:'nc-chart-pie-36',       class: '' },
+    { path: '/consultatii',                 title: 'Consultații',              icon:'nc-sound-wave',         class: '' },
     { path: '/table',                       title: 'Management Pacienți',      icon:'nc-badge',              class: '' },
-    { path: '/consultatii',                        title: 'Consultații',              icon:'nc-sound-wave',         class: '' },
+    { path: '/dashboardSaloane',            title: 'Management Saloane',       icon:'nc-layout-11',          class: '' },
     { path: '/tableProgram',                title: 'Program de lucru',         icon:'nc-calendar-60',        class: '' },
-    { path: '/managementSaloane',           title: 'Management Saloane',       icon:'nc-layout-11',          class: '' },
     { path: '/notifications',               title: 'Notifications',            icon:'nc-bell-55',            class: '' },
     { path: '/user',                        title: 'User Profile',             icon:'nc-circle-10',          class: '' },
     { path: '/icons',                       title: 'Icons',                    icon:'nc-diamond',            class: '' },
