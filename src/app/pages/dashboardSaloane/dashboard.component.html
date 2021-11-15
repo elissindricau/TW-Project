@@ -7,10 +7,10 @@
   <div style="position:relative;left: 7px;" class="col-lg-12 col-md-6 col-sm-6">
     <div class="card card-stats">
       <div class="card-body ">
-        <div class="row">
-          <div style="position:relative;left: 250px;">
+        <div class="row" style="position:relative;">
+          <div class="col-md-3 pr-1">
           <label for="nivele" style="font-size: 14px;">Nivel:</label>
-            <select name="nivele" id="nivele">
+            <select name="nivele" id="nivele" class="form-control">
               <option value="nivel">Selecteaza nivel</option>
               <option value="parter">Parter</option>
               <option value="etaj1">Etaj 1</option>
@@ -20,9 +20,10 @@
               <option value="etaj5">Etaj 5</option>
               <option value="etaj6">Etaj 6</option>
             </select>
-
+            </div>
+            <div class="col-md-3 px-1">
             <label for="sectii" style="font-size: 14px;">Sectie:</label>
-            <select name="sectii" id="sectii">
+            <select name="sectii" id="sectii" class="form-control">
               <option value="sectie">Selecteaza sectie</option>
               <option value="sectia1">Sectia 1</option>
               <option value="sectia2">Sectia 2</option>
@@ -32,9 +33,10 @@
               <option value="sectia6">Sectia 6</option>
               <option value="sectia7">Sectia 7</option>
             </select>
-
+            </div>
+            <div class="col-md-3 pl-1">
             <label for="saloane" style="font-size: 14px;">Salon:</label>
-            <select name="saloane" id="saloane">
+            <select name="saloane" id="saloane" class="form-control">
               <option value="salon">Selecteaza salon</option>
               <option value="salon1">Salon 1</option>
               <option value="salon2">Salon 2</option>
@@ -44,45 +46,48 @@
               <option value="salon6">Salon 6</option>
               <option value="salon7">Salon 7</option>
             </select>
-          </div>
+            </div>
         </div>
+
+        <div style="position: relative;left: 30%;">
+          <!-- <div class="card card-stats">
+            <div class="card-body ">
+              <div class="row"> -->
+                
+                <p class="card-category" style="position: relative;left: 20%;">Etaj 2 -> Sectia 3 -> Salon 7: </p>
+                <p></p>
+                <div style="position: relative;left: 20%;">
+                <ul>
+                  <li> Pat 1 - <b> disponibil </b></li>
+                  <li> Pat 2 - <b> disponibil </b></li>
+                  <li> Pat 3 - indisponibil </li>
+                  <li> Pat 4 - <b> disponibil </b></li>
+                  <li> Pat 5 - indisponibil </li>
+                  <li> Pat 6 - indisponibil </li>
+                  <li> Pat 7 - <b> disponibil </b></li>
+                  <li> Pat 8 - <b> disponibil </b></li>
+                </ul>
+                </div>
+                
+              </div>
+            </div>
+            <div class="card-footer ">
+              <hr>
+              <div class="stats">
+                <i class="nc-icon nc-check-2 text-primary"></i> 5 disponibile
+                <i class="nc-icon nc-simple-remove text-primary"></i> 3 indisponibile 
+              <!-- </div>
+            </div>
+          </div> -->
+        </div>
+
       </div>
     </div>
   </div>
 
   
 
-  <div style="position: relative;left: 30%;" class="col-lg-4 col-md-6 col-sm-6">
-    <div class="card card-stats">
-      <div class="card-body ">
-        <div class="row">
-          
-          <p class="card-category" style="position: relative;left: 20%;">Etaj 2 -> Sectia 3 -> Salon 7: </p>
-          <p></p>
-          <div style="position: relative;left: 20%;">
-          <ul>
-            <li> Pat 1 - <b> disponibil </b></li>
-            <li> Pat 2 - <b> disponibil </b></li>
-            <li> Pat 3 - indisponibil </li>
-            <li> Pat 4 - <b> disponibil </b></li>
-            <li> Pat 5 - indisponibil </li>
-            <li> Pat 6 - indisponibil </li>
-            <li> Pat 7 - <b> disponibil </b></li>
-            <li> Pat 8 - <b> disponibil </b></li>
-          </ul>
-          </div>
-          
-        </div>
-      </div>
-      <div class="card-footer ">
-        <hr>
-        <div class="stats">
-          <i class="nc-icon nc-check-2 text-primary"></i> 5 disponibile
-          <i class="nc-icon nc-simple-remove text-primary"></i> 3 indisponibile 
-        </div>
-      </div>
-    </div>
-  </div>
+ 
   
 
   <!-- <div class="col-lg-4 col-md-6 col-sm-6">
