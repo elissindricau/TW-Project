@@ -10,6 +10,7 @@ import { UserComponent }            from '../../pages/user/user.component';
 import { ConsultatiiComponent }            from '../../pages/consultatii/user.component';
 import { AdaugaActivitateComponent }            from '../../pages/adaugaActivitate/user.component';
 import { TableComponent }           from '../../pages/table/table.component';
+import { PacientComponent }           from '../../pages/pacientNou/pacient.component';
 import { TableProgramComponent }    from '../../pages/tableProgram/table.component';
 import { DashboardSaloaneComponent }       from '../../pages/dashboardSaloane/dashboard.component';
 import { TypographyComponent }      from '../../pages/typography/typography.component';
@@ -33,6 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AdaugaActivitateComponent,
     UserComponent,
     TableComponent,
+    PacientComponent,
     TableProgramComponent,
     DashboardSaloaneComponent,
     UpgradeComponent,
