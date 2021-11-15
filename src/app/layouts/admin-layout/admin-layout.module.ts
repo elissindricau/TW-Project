@@ -7,6 +7,7 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 
 import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
 import { UserComponent }            from '../../pages/user/user.component';
+import { ConsultatiiComponent }            from '../../pages/consultatii/user.component';
 import { TableComponent }           from '../../pages/table/table.component';
 import { TableProgramComponent }    from '../../pages/tableProgram/table.component';
 import { TypographyComponent }      from '../../pages/typography/typography.component';
@@ -26,6 +27,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   declarations: [
     DashboardComponent,
+    ConsultatiiComponent,
     UserComponent,
     TableComponent,
     TableProgramComponent,
