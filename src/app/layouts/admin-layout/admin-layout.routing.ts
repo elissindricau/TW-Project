@@ -5,6 +5,7 @@ import { ConsultatiiComponent } from '../../pages/consultatii/user.component';
 import { AdaugaActivitateComponent } from '../../pages/adaugaActivitate/user.component';
 import { UserComponent } from '../../pages/user/user.component';
 import { TableComponent } from '../../pages/table/table.component';
+import { PacientComponent } from '../../pages/pacientNou/pacient.component';
 import { TableProgramComponent } from '../../pages/tableProgram/table.component';
 import { DashboardSaloaneComponent } from '../../pages/dashboardSaloane/dashboard.component';
 import { TypographyComponent } from '../../pages/typography/typography.component';
@@ -19,6 +20,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'adaugaActivitate',    component: AdaugaActivitateComponent },
     { path: 'user',           component: UserComponent },
     { path: 'table',          component: TableComponent },
+    { path: 'pacient',          component: PacientComponent },
     { path: 'tableProgram',   component: TableProgramComponent },
     { path: 'dashboardSaloane',      component: DashboardSaloaneComponent },
     { path: 'typography',     component: TypographyComponent },
