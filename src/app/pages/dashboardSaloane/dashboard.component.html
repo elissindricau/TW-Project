@@ -1,12 +1,9 @@
-
-
-
-
 <div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
 
-  <div style="position:relative;left: 7px;" class="col-lg-12 col-md-6 col-sm-6">
-    <div class="card card-stats">
-      <div class="card-body ">
+
         <div class="row" style="position:relative;">
           <div class="col-md-3 pr-1">
           <label for="nivele" style="font-size: 14px;">Nivel:</label>
@@ -25,13 +22,13 @@
             <label for="sectii" style="font-size: 14px;">Sectie:</label>
             <select name="sectii" id="sectii" class="form-control">
               <option value="sectie">Selecteaza sectie</option>
-              <option value="sectia1">Sectia 1</option>
-              <option value="sectia2">Sectia 2</option>
-              <option value="sectia3">Sectia 3</option>
-              <option value="sectia4">Sectia 4</option>
-              <option value="sectia5">Sectia 5</option>
-              <option value="sectia6">Sectia 6</option>
-              <option value="sectia7">Sectia 7</option>
+              <option value="sectia1">Urgente</option>
+              <option value="sectia2">Cardiologie</option>
+              <option value="sectia3">Psihiatrie</option>
+              <option value="sectia4">Boli canceroase</option>
+              <option value="sectia5">Sectia 1</option>
+              <option value="sectia6">Sectia 2</option>
+              <option value="sectia7">Sectia 3</option>
             </select>
             </div>
             <div class="col-md-3 pl-1">
@@ -47,74 +44,200 @@
               <option value="salon7">Salon 7</option>
             </select>
             </div>
+
+            <div style="position:relative;top: 8px;left: 85px;">
+            <div style="position:absolute;top: 5px;">
+              <button class="btn btn-primary btn-round">Filtreaza</button>
+            </div>
+          </div>
+
         </div>
 
-        <div style="position: relative;left: 30%;">
-          <!-- <div class="card card-stats">
-            <div class="card-body ">
-              <div class="row"> -->
-                
-                <p class="card-category" style="position: relative;left: 20%;">Etaj 2 -> Sectia 3 -> Salon 7: </p>
-                <p></p>
-                <div style="position: relative;left: 20%;">
-                <ul>
-                  <li> Pat 1 - <b> disponibil </b></li>
-                  <li> Pat 2 - <b> disponibil </b></li>
-                  <li> Pat 3 - indisponibil </li>
-                  <li> Pat 4 - <b> disponibil </b></li>
-                  <li> Pat 5 - indisponibil </li>
-                  <li> Pat 6 - indisponibil </li>
-                  <li> Pat 7 - <b> disponibil </b></li>
-                  <li> Pat 8 - <b> disponibil </b></li>
-                </ul>
-                </div>
-                
-              </div>
-            </div>
-            <div class="card-footer ">
-              <hr>
-              <div class="stats">
-                <i class="nc-icon nc-check-2 text-primary"></i> 5 disponibile
-                <i class="nc-icon nc-simple-remove text-primary"></i> 3 indisponibile 
-              <!-- </div>
-            </div>
-          </div> -->
-        </div>
+        <div class="row" style="position:relative;"><p></p></div>
 
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead class="text-primary">
+              <th>
+                Nivel
+              </th>
+              <th>
+                Sectie
+              </th>
+              <th>
+                Salon
+              </th>
+              <th>
+                Pat
+              </th>
+              <th>
+                Disponibilitate
+              </th>
+              <th>
+                Actiune
+              </th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Etaj 6
+                </td>
+                <td>
+                  Cardiologie
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  Indisponibil
+                </td>
+                <td>
+                  <div style="position:absolute;top: 5px;">
+                    <button class="btn btn-primary btn-round">Elibereaza</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Parter
+                </td>
+                <td>
+                  Urgente
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  Indisponibil
+                </td>
+                <td>
+                  <div style="position:absolute;top: 5px;">
+                    <button class="btn btn-primary btn-round">Elibereaza</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Parter
+                </td>
+                <td>
+                  Urgente
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  Indisponibil
+                </td>
+                <td>
+                  <div style="position:absolute;top: 5px;">
+                    <button class="btn btn-primary btn-round">Elibereaza</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Etaj 4
+                </td>
+                <td>
+                  Psihiatrie
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  Indisponibil
+                </td>
+                <td>
+                  <div style="position:absolute;top: 5px;">
+                    <button class="btn btn-primary btn-round">Elibereaza</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Etaj 4
+                </td>
+                <td>
+                  Psihiatrie
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  Indisponibil
+                </td>
+                <td>
+                  <div style="position:absolute;top: 5px;">
+                    <button class="btn btn-primary btn-round">Elibereaza</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Parter
+                </td>
+                <td>
+                  Urgente
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  Indisponibil
+                </td>
+                <td>
+                  <div style="position:absolute;top: 5px;">
+                    <button class="btn btn-primary btn-round">Elibereaza</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Etaj 1
+                </td>
+                <td>
+                  Boli canceroase
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  Indisponibil
+                </td>
+                <td>
+                  <div style="position:absolute;top: 5px;">
+                    <button class="btn btn-primary btn-round">Elibereaza</button>
+                  </div>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-
-  
-
- 
-  
-
-  <!-- <div class="col-lg-4 col-md-6 col-sm-6">
-    <div class="card card-stats">
-      <div class="card-body ">
-        <div class="row">
-          <div class="col-5 col-md-4">
-            <div class="icon-big text-center icon-warning">
-              <i class="nc-icon nc-watch-time text-primary"></i>
-            </div>
-          </div>
-          <div class="col-7 col-md-8">
-            <div class="numbers">
-              <p class="card-category">Ore de lucru</p>
-              <p class="card-title">37h
-                <p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer ">
-        <hr>
-        <div class="stats">
-          <i class="fa fa-calendar-o"></i> This week
-        </div>
-      </div>
-    </div>
-  </div> -->
 
 </div>
