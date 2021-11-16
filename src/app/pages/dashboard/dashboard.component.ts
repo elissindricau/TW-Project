@@ -27,25 +27,26 @@ export class DashboardComponent implements OnInit{
 
         data: {
           labels: ["0-10", "10-20", "20-30", "30-40", "40-50", "50-60", "60-70", "+70"],
-          datasets: [{
-              borderColor: "#ffd700",
-              backgroundColor: "#ffd700",
+          datasets: [
+           {
+              borderColor: "#28a745",
+              backgroundColor: "#28a745",
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
               data: [300, 310, 316, 322, 330, 326, 333, 345]
             },
             {
-              borderColor: "#daa520	",
-              backgroundColor: "#daa520	",
+              borderColor: "#ffc107	",
+              backgroundColor: "#ffc107	",
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
               data: [320, 340, 365, 360, 370, 385, 390, 384]
             },
             {
-              borderColor: "#008000",
-              backgroundColor: "#008000",
+              borderColor: "#de6118",
+              backgroundColor: "#de6118",
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
@@ -55,7 +56,7 @@ export class DashboardComponent implements OnInit{
         },
         options: {
           legend: {
-            display: true
+            display: false
           },
 
           tooltips: {
@@ -163,47 +164,47 @@ export class DashboardComponent implements OnInit{
       //   }
       // });
 
-    //   var speedCanvas = document.getElementById("speedChart");
+      // var speedCanvas = document.getElementById("speedChart");
 
-    //   var dataFirst = {
-    //     data: [0, 19, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],
-    //     fill: false,
-    //     borderColor: '#fbc658',
-    //     backgroundColor: 'transparent',
-    //     pointBorderColor: '#fbc658',
-    //     pointRadius: 4,
-    //     pointHoverRadius: 4,
-    //     pointBorderWidth: 8,
-    //   };
+      // var dataFirst = {
+      //   data: [0, 19, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],
+      //   fill: false,
+      //   borderColor: '#fbc658',
+      //   backgroundColor: 'transparent',
+      //   pointBorderColor: '#fbc658',
+      //   pointRadius: 4,
+      //   pointHoverRadius: 4,
+      //   pointBorderWidth: 8,
+      // };
 
-    //   var dataSecond = {
-    //     data: [0, 5, 10, 12, 20, 27, 30, 34, 42, 45, 55, 63],
-    //     fill: false,
-    //     borderColor: '#51CACF',
-    //     backgroundColor: 'transparent',
-    //     pointBorderColor: '#51CACF',
-    //     pointRadius: 4,
-    //     pointHoverRadius: 4,
-    //     pointBorderWidth: 8
-    //   };
+      // var dataSecond = {
+      //   data: [0, 5, 10, 12, 20, 27, 30, 34, 42, 45, 55, 63],
+      //   fill: false,
+      //   borderColor: '#51CACF',
+      //   backgroundColor: 'transparent',
+      //   pointBorderColor: '#51CACF',
+      //   pointRadius: 4,
+      //   pointHoverRadius: 4,
+      //   pointBorderWidth: 8
+      // };
 
-    //   var speedData = {
-    //     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    //     datasets: [dataFirst, dataSecond]
-    //   };
+      // var speedData = {
+      //   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      //   datasets: [dataFirst, dataSecond]
+      // };
 
-    //   var chartOptions = {
-    //     legend: {
-    //       display: false,
-    //       position: 'top'
-    //     }
-    //   };
+      // var chartOptions = {
+      //   legend: {
+      //     display: false,
+      //     position: 'top'
+      //   }
+      // };
 
-    //   var lineChart = new Chart(speedCanvas, {
-    //     type: 'line',
-    //     hover: false,
-    //     data: speedData,
-    //     options: chartOptions
-    //   });
+      // var lineChart = new Chart(speedCanvas, {
+      //   type: 'line',
+      //   hover: false,
+      //   data: speedData,
+      //   options: chartOptions
+      // });
      }
 }
