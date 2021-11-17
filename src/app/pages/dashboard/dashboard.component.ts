@@ -29,28 +29,31 @@ export class DashboardComponent implements OnInit{
           labels: ["0-10", "10-20", "20-30", "30-40", "40-50", "50-60", "60-70", "+70"],
           datasets: [
            {
-              borderColor: "#28a745",
-              backgroundColor: "#28a745",
+             //rosu
+              borderColor: "#de6118",
+              backgroundColor: "#ffffff",
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
               data: [300, 310, 316, 322, 330, 326, 333, 345]
             },
             {
+              //galben
               borderColor: "#ffc107	",
-              backgroundColor: "#ffc107	",
+              backgroundColor: "#ffffff	",
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
               data: [320, 340, 365, 360, 370, 385, 390, 384]
             },
             {
-              borderColor: "#de6118",
-              backgroundColor: "#de6118",
+              //verde
+              borderColor: "#28a745",
+              backgroundColor: "#ffffff",
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
-              data: [370, 394, 415, 409, 425, 445, 460, 450]
+              data: [370, 394, 415, 409, 390, 392, 360, 340]
             }
           ]
         },
