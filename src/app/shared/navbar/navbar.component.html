@@ -18,9 +18,21 @@
       <span class="navbar-toggler-bar navbar-kebab"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="isCollapsed">
-      <form>
+
+      <div class="update mr-15">
+        <button type="submit" class="btn btn-primary btn-round">Check in</button>
+        <button type="submit" class="btn btn-primary btn-round">Check out</button>
+        <!-- <i class="nc-icon nc-user-run"></i>
+            <p>
+              <span class="d-lg-none d-md-block">Log out</span>
+            </p> -->
+        <button type="button" class="nc-icon nc-user-run btn btn-round"></button>
+      </div>
+
+
+      <!-- <form>
         <div class="input-group no-border">
-          <input type="text" value="" class="form-control" placeholder="Search...">
+          <input type="text" value="" class="form-control" placeholder="ceva...">
           <div class="input-group-append">
             <div class="input-group-text">
               <i class="nc-icon nc-zoom-split"></i>
@@ -59,7 +71,7 @@
             </p>
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>
