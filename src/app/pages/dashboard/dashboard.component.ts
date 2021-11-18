@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit{
               backgroundColor: "#ffffff",
               pointRadius: 0,
               pointHoverRadius: 0,
-              borderWidth: 3,
+              borderWidth: 1,
               data: [300, 310, 316, 322, 330, 326, 333, 345]
             },
             {
@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit{
               backgroundColor: "#ffffff	",
               pointRadius: 0,
               pointHoverRadius: 0,
-              borderWidth: 3,
+              borderWidth: 1,
               data: [320, 340, 365, 360, 370, 385, 390, 384]
             },
             {
@@ -52,7 +52,7 @@ export class DashboardComponent implements OnInit{
               backgroundColor: "#ffffff",
               pointRadius: 0,
               pointHoverRadius: 0,
-              borderWidth: 3,
+              borderWidth: 1,
               data: [370, 394, 415, 409, 390, 392, 360, 340]
             }
           ]
