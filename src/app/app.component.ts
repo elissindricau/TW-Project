@@ -15,42 +15,9 @@ import { UserService } from './service/user.service';
 })
 
 export class AppComponent implements OnInit {
-  appState$: Observable<AppState<CustomResponse>>;
-  readonly DataState = DataState;
-  private dataSubject = new BehaviorSubject<CustomResponse>(null);
-  constructor(private userService: UserService) { }
-
-  ngOnInit(): void {
-    this.appState$ = this.userService.users$
-      .pipe(
-        map(response => {
-          return { dataState: DataState.LOADED_STATE, appData: response }
-        }),
-        startWith({ dataState: DataState.LOADING_STATE }),
-        catchError((error: string) => {
-          return of({ dataState: DataState.ERROR_STATE, error });
-        })
-      );
+  ngOnInit(){
   }
-
-
-  saveUser(userForm: NgForm): void {
-    this.appState$ = this.userService.save$(userForm.value as User)
-    .pipe(
-      map(response => {
-        this.dataSubject.next(
-          {...response, data: {users: [response.data.user, ...this.dataSubject.value.data.users]}}
-        );
-        // document.getElementById('registerBtn').click();
-        return{dataState: DataState.LOADED_STATE, appData: this.dataSubject.value};
-      }),
-      startWith({ dataState: DataState.LOADED_STATE, appData: this.dataSubject.value}),
-      catchError((error: string) => {
-        return of({ dataState: DataState.ERROR_STATE, error });
-      })
-    );
-
-  }
+  
 
 
 
