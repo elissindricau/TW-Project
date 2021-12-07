@@ -8,7 +8,7 @@ import { tap, catchError} from "rxjs/operators";
 @Injectable({ providedIn: 'root' })
 export class UserService {
 
-    private readonly apiUrl = 'http://localhost:8080';
+    private readonly apiUrl = 'http://localhost:8081';
 
     constructor(private http: HttpClient) {}
 
@@ -19,15 +19,23 @@ export class UserService {
         catchError(this.handleError)
     );
 
-    save$ = (user: User) => <Observable<CustomResponse>>
-    this.http.post<CustomResponse>(`${this.apiUrl}/user/save` , user)
-    .pipe(
-        tap(console.log),
-        catchError(this.handleError)
-    );
+    // save$ = (user: User) => <Observable<CustomResponse>>
+    // this.http.post<CustomResponse>(`${this.apiUrl}/user/save` , user)
+    // .pipe(
+    //     tap(console.log),
+    //     catchError(this.handleError)
+    // );
     
+    save(data) : Observable<any> {
+
+        return this.http.post(`${this.apiUrl}/user/save`, data);
+
+    }
+
+
     private handleError(error: HttpErrorResponse): Observable<never> {
         console.log(error)
         return throwError(`An error occurred - Error code: ${error.status}`);
     }
+
 }

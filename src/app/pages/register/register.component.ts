@@ -35,23 +35,33 @@ export class RegisterComponent implements OnInit{
 
 
   saveUser(userForm: NgForm): void {
-      console.log(userForm.value as User)
-      userForm.resetForm()
-    this.appState$ = this.userService.save$(userForm.value as User)
-    .pipe(
-      map(response => {
-        this.dataSubject.next(
-          {...response, data: {users: [response.data.user, ...this.dataSubject.value.data.users]}}
-        );
-        console.log(userForm.value as User)
-        // document.getElementById('registerBtn').click();
-        return{dataState: DataState.LOADED_STATE, appData: this.dataSubject.value};
-      }),
-      startWith({ dataState: DataState.LOADED_STATE, appData: this.dataSubject.value}),
-      catchError((error: string) => {
-        return of({ dataState: DataState.ERROR_STATE, error });
-      })
-    );
+      const data = {
+        firstName : userForm.controls['firstName'].value,
+        lastName : userForm.controls['lastName'].value,
+        dept : userForm.controls['dept'].value,
+        email : userForm.controls['email'].value,
+        password : userForm.controls['password'].value
+      };
+      console.log(data);
+      this.userService.save(data);
+      userForm.resetForm();
+
+    // this.appState$ = this.userService.save(userForm.value as User);
+
+    // .pipe(
+    //   map(response => {
+    //     this.dataSubject.next(
+    //       {...response, data: {users: [response.data.user, ...this.dataSubject.value.data.users]}}
+    //     );
+    //     console.log(userForm.value as User)
+    //     // document.getElementById('registerBtn').click();
+    //     return{dataState: DataState.LOADED_STATE, appData: this.dataSubject.value};
+    //   }),
+    //   startWith({ dataState: DataState.LOADED_STATE, appData: this.dataSubject.value}),
+    //   catchError((error: string) => {
+    //     return of({ dataState: DataState.ERROR_STATE, error });
+    //   })
+    // );
 
   }
 }
