@@ -16,6 +16,9 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { FormsModule } from "@angular/forms";
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from "@angular/platform-browser";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,9 @@ import { FormsModule } from "@angular/forms";
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

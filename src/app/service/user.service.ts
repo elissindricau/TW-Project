@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { CustomResponse } from "app/interface/custom-response";
 import { User } from "app/interface/user";
 import { Observable, throwError  } from "rxjs";
-import { tap, catchError} from "rxjs/operators";
+import { tap, catchError, retry} from "rxjs/operators";
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -26,9 +26,9 @@ export class UserService {
     //     catchError(this.handleError)
     // );
     
-    save(data) : Observable<any> {
+    save(data: { firstName: any; lastName: any; dept: any; email: any; password: any; }) : Observable<User> {
 
-        return this.http.post(`${this.apiUrl}/user/save`, data);
+        return this.http.post<User>(`${this.apiUrl}/user/save`, data);
 
     }
 
