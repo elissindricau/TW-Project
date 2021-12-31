@@ -5,115 +5,136 @@
         <h5 class="card-title">Inregistrare Pacient </h5>
       </div>
       <div class="card-body">
-        <form>
+
+        <form #pacientForm="ngForm" novalidate>
           <div class="row">
+
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Cod Numeric Personal</label>
-                <input type="text" class="form-control" placeholder="ex: 3658629389***">
+                <input type="text" ngModel name="CNP" required class="form-control" placeholder="ex: 3658629389***">
               </div>
             </div>
+
             <div class="col-md-4 px-1">
               <div class="form-group">
                 <label>Nume</label>
-                <input type="text" class="form-control">
+                <input type="text" ngModel name="nume" required class="form-control">
               </div>
             </div>
+
             <div class="col-md-4 pl-1">
               <div class="form-group">
                 <label>Prenume</label>
-                <input type="text" class="form-control">
+                <input type="text" ngModel name="prenume" required class="form-control">
               </div>
             </div>
           </div>
+
           <div class="row">
+
             <div class="col-md-3 pr-1">
               <div class="form-group">
                 <label>Data Nasterii</label>
-                <input type="date" class="form-control">
+                <input type="date" ngModel name="dataNasterii" required class="form-control">
               </div>
             </div>
+
             <div class="col-md-3 px-1">
               <div class="form-group">
                 <label>Sex</label>
-                <select id="sex" name="sex" class="form-control">
+                <select id="sex" name="sex" ngModel required class="form-control">
                   <option value="Feminin">Feminin</option>
                   <option value="Masculin">Masculin</option>
                 </select>
               </div>
             </div>
+
             <div class="col-md-3 px-1">
               <div class="form-group">
                 <label>Stare Civila</label>
-                <select id="stareCivila" name="stareCivila" class="form-control">
+                <select id="stareCivila" name="stareCivila" ngModel required class="form-control">
                   <option value="Casatorit">Casatorit</option>
                   <option value="Necasatorit" selected>Necasatorit</option>
                 </select>
               </div>
             </div>
+
             <div class="col-md-3 pl-1">
               <div class="form-group">
                 <label>Telefon</label>
-                <input type="text" class="form-control">
+                <input type="text" ngModel name="nrTelefon" required class="form-control">
               </div>
             </div>
           </div>
+
           <div class="row">
+
             <div class="col-md-12">
               <div class="form-group">
                 <label>Adresa</label>
-                <input type="text" class="form-control">
+                <input type="text" ngModel name="adresa" required class="form-control" placeholder="ex: Strada, Nr">
               </div>
-            </div>
+            </div>  
           </div>
+
           <div class="row">
+
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Oras</label>
-                <input type="text" class="form-control">
+                <input type="text" ngModel name="oras" required class="form-control">
               </div>
             </div>
+
             <div class="col-md-4 px-1">
               <div class="form-group">
                 <label>Judet</label>
-                <input type="text" class="form-control">
+                <input type="text" ngModel name="judet" required class="form-control">
               </div>
             </div>
+
             <div class="col-md-4 pl-1">
               <div class="form-group">
                 <label>Tara</label>
-                <input type="number" class="form-control">
+                <input type="text" ngModel name="tara" required class="form-control">
               </div>
             </div>
           </div>
+
           <div class="row">
+
             <div class="col-md-12">
               <div class="form-group">
                 <label>Antecedente</label>
-                <textarea class="form-control textarea"></textarea>
+                <textarea ngModel name="antecedente" required class="form-control textarea"></textarea>
               </div>
             </div>
           </div>
+
           <div class="row">
             <h style="padding: 15px;">Persoana de Contact </h>
           </div>
+
           <div class="row">
             <div class="col-md-4 pr-1">
               <div class="form-group">
-                <label>Nume </label>
-                <input type="text" class="form-control">
+                <label>Nume și Prenume</label>
+                <input type="text" ngModel name="persoanaContact" required class="form-control">
               </div>
             </div>
+
             <div class="col-md-4 px-1">
               <div class="form-group">
                 <label>Telefon</label>
-                <input type="text" class="form-control">
+                <input type="text" ngModel name="telefonContact" required class="form-control">
               </div>
             </div>
           </div>
+
           <div class="row">
             <div class="update ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary btn-round">Creati Fisa</button>
+              <button type="submit" class="btn btn-primary btn-round" routerLink="/table">Inregistrare pacient</button>
             </div>
           </div>
 
