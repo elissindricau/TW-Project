@@ -12,7 +12,7 @@
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Cod Numeric Personal</label>
-                <input type="text" ngModel name="CNP" required class="form-control" placeholder="ex: 3658629389***">
+                <input type="text" ngModel name="cnp" required class="form-control" placeholder="ex: 3658629389***" minlength="13" maxlength="13">
               </div>
             </div>
 
@@ -63,7 +63,7 @@
             <div class="col-md-3 pl-1">
               <div class="form-group">
                 <label>Telefon</label>
-                <input type="text" ngModel name="nrTelefon" required class="form-control">
+                <input type="text" ngModel name="nrTelefon" required class="form-control" minlength="10" maxlength="10">
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
           </div>
 
           <div class="row">
-            <h style="padding: 15px;">Persoana de Contact </h>
+            <p style="padding: 15px;">Persoana de Contact </p>
           </div>
 
           <div class="row">
@@ -134,11 +134,12 @@
 
           <div class="row">
             <div class="update ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary btn-round" routerLink="/table">Inregistrare pacient</button>
+              <button type="submit" class="btn btn-primary btn-round" (click)="savePacient(pacientForm)" [disabled]="!pacientForm.form.valid">Inregistrare pacient</button>
             </div>
           </div>
 
         </form>
+
       </div>
     </div>
   </div>

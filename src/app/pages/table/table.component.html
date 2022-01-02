@@ -19,125 +19,33 @@
         <a routerLink="/pacient"><button class="btn btn-primary btn-round">Pacient Nou</button></a>
       </div>
       <div class="card-body">
+        <ng-container *ngIf="(appState$ | async) as appState" [ngSwitch]="appState.dataState" >
         <div class="table-responsive">
-          <table class="table">
+          <ng-container *ngSwitchCase="DataState.LOADED_STATE">
+            <table class="table">
             <thead class=" text-primary">
-              <th>
-                Nume
-              </th>
-              <th>
-                CNP
-              </th>
-              <th>
-                Data Nasterii
-              </th>
-              <th class="text-right">
-                Telefon
-              </th>
+              <tr>
+                <th>CNP</th>
+                <th>Nume</th>
+                <th>Prenume</th>
+                <th>Data Nasterii</th>
+                <th>Telefon</th>
+             </tr>
             </thead>
-            <tbody>
+            <tbody *ngFor="let pacient of appState.appData.data.pacient; let i = index">
               <tr>
-                <td>
-                  Dakota Rice
-                </td>
-                <td>
-                  2938056445312
-                </td>
-                <td>
-                  13/01/2000
-                </td>
-                <td class="text-right">
-                  0765826734
-                </td>
+                <td>{{pacient.cnp}}</td>
+                <td>{{pacient.nume}}</td>
+                <td>{{pacient.prenume}}</td>
+                <td>{{pacient.dataNasterii |  date:'EEE'}}</td>
+                <td>{{pacient.nrTelefon}}</td>
               </tr>
-              <tr>
-                <td>
-                  Minerva Hooper
-                </td>
-                <td>
-                  1942796297603
-                </td>
-                <td>
-                  04/05/1994
-                </td>
-                <td class="text-right">
-                  0383604781
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Sage Rodriguez
-                </td>
-                <td>
-                  3971561611357
-                </td>
-                <td>
-                  18/09/2001
-                </td>
-                <td class="text-right">
-                  9084430625
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Philip Chaney
-                </td>
-                <td>
-                  0049208020730
-                </td>
-                <td>
-                  29/11/1996
-                </td>
-                <td class="text-right">
-                  6741102571
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Doris Greene
-                </td>
-                <td>
-                  0933264024044
-                </td>
-                <td>
-                  22/10/1997
-                </td>
-                <td class="text-right">
-                  8940862461
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Mason Porter
-                </td>
-                <td>
-                  2542273080408
-                </td>
-                <td>
-                  02/03/1999
-                </td>
-                <td class="text-right">
-                  5709451177
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Jon Porter
-                </td>
-                <td>
-                  8095964848339
-                </td>
-                <td>
-                  10/08/1998
-                </td>
-                <td class="text-right">
-                  1743567350
-                </td>
-              </tr>
-              
             </tbody>
           </table>
+        </ng-container>
+        <!-- <div>{{ appState$ | async | json }}</div> -->
         </div>
+      </ng-container>
       </div>
     </div>
   </div>

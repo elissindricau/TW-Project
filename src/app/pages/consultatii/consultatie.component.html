@@ -5,12 +5,12 @@
         <h5 class="card-title">Fisa Consultatie: </h5>
       </div>
       <div class="card-body">
-        <form>
+        <form #consultatieForm="ngForm" novalidate>
           <div class="row">
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Cod Numeric Personal</label>
-                <input type="text" class="form-control" placeholder="ex: 3658629389***" >
+                <input type="text" ngModel name="cnp" required class="form-control" placeholder="ex: 3658629389***" minlength="13" maxlength="13">
               </div>
             </div>
           </div>
@@ -18,13 +18,13 @@
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label >Nume</label>
-                <input type="text" class="form-control" >
+                <input type="text" ngModel name="nume" required class="form-control">
               </div>
             </div>
             <div class="col-md-4 pl-1">
               <div class="form-group">
                 <label >Prenume</label>
-                <input type="text" class="form-control">
+                <input type="text" ngModel name="prenume" required class="form-control">
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Data </label>
-                <input type="date" class="form-control" >
+                <input type="date" ngModel name="dataConsultatie" required class="form-control">
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label>Simptome</label>
-                <textarea class="form-control textarea"></textarea>
+                <textarea class="form-control textarea" ngModel name="simptome" required></textarea>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label>Diagnostic</label>
-                <textarea class="form-control textarea"></textarea>
+                <textarea class="form-control textarea" ngModel name="diagnostic" required></textarea>
               </div>
             </div>
           </div>
@@ -56,13 +56,13 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label>Prescriptii/Recomandari</label>
-                <textarea class="form-control textarea"></textarea>
+                <textarea class="form-control textarea" ngModel name="prescriptie" required></textarea>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="update ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary btn-round">Creati Fisa</button>
+              <button type="submit" class="btn btn-primary btn-round" (click)="saveConsultatie(consultatieForm)" [disabled]="!consultatieForm.form.valid">Creati Fisa</button>
             </div>
           </div>
         </form>

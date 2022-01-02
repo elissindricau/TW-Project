@@ -38,7 +38,7 @@ export class PacientComponent implements OnInit{
 
 
 
-  saveUser(pacientForm: NgForm): void {
+  savePacient(pacientForm: NgForm): void {
       const data = {
         cnp : pacientForm.controls['cnp'].value,
         nume : pacientForm.controls['nume'].value,
@@ -53,7 +53,7 @@ export class PacientComponent implements OnInit{
         tara : pacientForm.controls['tara'].value,
         antecedente : pacientForm.controls['antecedente'].value,
         persoanaContact : pacientForm.controls['persoanaContact'].value,
-        telefonContact : pacientForm.controls['telefonContact'].value,
+        telefonContact : pacientForm.controls['telefonContact'].value
       };
       this.pacientService
           .save(data)

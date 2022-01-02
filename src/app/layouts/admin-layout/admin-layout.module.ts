@@ -7,11 +7,11 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 
 import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
 import { UserComponent }            from '../../pages/user/user.component';
-import { ConsultatiiComponent }            from '../../pages/consultatii/user.component';
+import { ConsultatiiComponent }            from '../../pages/consultatii/consultatie.component';
 import { AdaugaActivitateComponent }            from '../../pages/adaugaActivitate/user.component';
 import { TableComponent }           from '../../pages/table/table.component';
 import { PacientComponent }           from '../../pages/pacientNou/pacient.component';
-import { TableProgramComponent }    from '../../pages/tableProgram/table.component';
+import { TableProgramComponent }    from '../../pages/tableProgram/program.component';
 import { DashboardSaloaneComponent }       from '../../pages/dashboardSaloane/dashboard.component';
 import { TypographyComponent }      from '../../pages/typography/typography.component';
 import { IconsComponent }           from '../../pages/icons/icons.component';
