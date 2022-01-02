@@ -5,19 +5,21 @@
         <h5 class="card-title">Activitate noua: </h5>
       </div>
       <div class="card-body">
-        <form>
+
+        <form #activitateForm="ngForm" novalidate>
 
           <div class="row">
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Ora</label>
-                <input type="time" class="form-control" >
+                <input type="time" class="form-control" ngModel name="ora" required>
               </div>
             </div>
+
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Data</label>
-                <input type="date" class="form-control" >
+                <input type="date" class="form-control" ngModel name="data" required>
               </div>
             </div>
           </div>
@@ -26,7 +28,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label>Subiect</label>
-                <textarea class="form-control textarea"></textarea>
+                <textarea class="form-control textarea" ngModel name="subiect" required></textarea>
               </div>
             </div>
           </div>
@@ -35,14 +37,14 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label>Descriere</label>
-                <textarea class="form-control textarea"></textarea>
+                <textarea class="form-control textarea" ngModel name="descriere" required></textarea>
               </div>
             </div>
           </div>
 
           <div class="row">
             <div class="ml-auto mr-auto">
-              <a routerLink="/tableProgram"><button type="submit" class="btn btn-primary btn-round">Adauga</button></a>
+              <a routerLink="/tableProgram"><button type="submit" class="btn btn-primary btn-round" (click)="saveActivitate(activitateForm)" [disabled]="!activitateForm.form.valid" routerLink="/tableProgram">Adauga</button></a>
             </div>
           </div>
 

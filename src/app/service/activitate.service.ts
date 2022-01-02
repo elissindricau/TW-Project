@@ -1,27 +1,27 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { CustomResponse } from "app/interface/custom-response";
-import { Consultatie } from "app/interface/consultatie";
+import { Activitate } from "app/interface/activitate";
 import { Observable, throwError  } from "rxjs";
 import { tap, catchError, retry} from "rxjs/operators";
 
 @Injectable({ providedIn: 'root' })
-export class ConsultatieService {
+export class ActivitateService {
 
     private readonly apiUrl = 'http://localhost:8081';
 
     constructor(private http: HttpClient) {}
 
-    consultatii$ = <Observable<CustomResponse>>
-    this.http.get<CustomResponse>(`${this.apiUrl}/consultatie/list`)
+    activitati$ = <Observable<CustomResponse>>
+    this.http.get<CustomResponse>(`${this.apiUrl}/activitate/list`)
     .pipe(
         tap(console.log),
         catchError(this.handleError)
     );
 
-    save(data: { cnp: any; nume: any; prenume: any; dataConsultatie: any; simptome: any, diagnostic: any, prescriptie: any}) : Observable<Consultatie> {
+    save(data: { ora: any; data: any; subiect: any; descriere: any; }) : Observable<Activitate> {
 
-        return this.http.post<Consultatie>(`${this.apiUrl}/consultatie/save`, data);
+        return this.http.post<Activitate>(`${this.apiUrl}/activitate/save`, data);
 
     }
 
