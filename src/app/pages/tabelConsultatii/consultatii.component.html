@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Lista Consultatii: </h4>
+        </div>
+        <div class="card-body">
+          <ng-container *ngIf="(appState$ | async) as appState" [ngSwitch]="appState.dataState" >
+            <div class="table-responsive">
+              <ng-container *ngSwitchCase="DataState.LOADED_STATE">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th> Nume </th>
+                    <th> Prenume </th>
+                    <th> CNP </th>
+                    <th> Data </th>
+                    <th> Simptome </th>
+                    <th> Diagnostic </th>
+                    <th> Prescriptie </th>
+                  </thead>
+                  <tbody *ngFor="let consultatie of appState.appData.data.consultatie; let i = index">
+                    <tr>
+                      <td>{{consultatie.nume}}</td>
+                      <td>{{consultatie.prenume}}</td>
+                      <td>{{consultatie.cnp}}</td>
+                      <td>{{consultatie.dataConsultatie | date:'dd/MM/yyyy'}}</td>
+                      <td>{{consultatie.simptome}}</td>
+                      <td>{{consultatie.diagnostic}}</td>
+                      <td>{{consultatie.prescriptie}}</td>
+                    </tr> 
+                  </tbody>
+                </table>
+             </ng-container>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+   
+  </div>
+  

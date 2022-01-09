@@ -21,6 +21,7 @@ import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component'
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PacientInfoComponent } from 'app/pages/pacientInfo/info.component';
+import { TableConsultatiiComponent } from 'app/pages/tabelConsultatii/consultatii.component';
 
 @NgModule({
   imports: [
@@ -44,6 +45,7 @@ import { PacientInfoComponent } from 'app/pages/pacientInfo/info.component';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
+    TableConsultatiiComponent
   ]
 })
 
