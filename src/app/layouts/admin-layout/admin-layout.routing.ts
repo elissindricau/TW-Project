@@ -13,9 +13,11 @@ import { IconsComponent } from '../../pages/icons/icons.component';
 import { MapsComponent } from '../../pages/maps/maps.component';
 import { NotificationsComponent } from '../../pages/notifications/notifications.component';
 import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
+import { PacientInfoComponent } from 'app/pages/pacientInfo/info.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
+    { path: 'pacientInfo',      component: PacientInfoComponent },
     { path: 'consultatii',    component: ConsultatiiComponent },
     { path: 'adaugaActivitate',    component: AdaugaActivitateComponent },
     { path: 'user',           component: UserComponent },

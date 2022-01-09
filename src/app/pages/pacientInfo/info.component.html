@@ -1,0 +1,132 @@
+<div class="row">
+  <div style="position: relative;left: 27%; ">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title" style="font-weight: bold;">Pacient: </h5>
+      </div>
+      <div class="card-body">
+        <ng-container *ngIf="(appState$ | async) as appState" >
+          <div class="row" style="padding-left: 20px;">
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>CNP</label>
+                <p>{{appState.appData.data.pacient.cnp}}</p>
+              </div>
+            </div>
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Nume</label>
+                <p>{{appState.appData.data.pacient.nume}}</p>
+              </div>
+            </div>
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Prenume</label>
+                <p>{{appState.appData.data.pacient.prenume}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="padding-left: 20px;">
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Data Nasterii</label>
+                <p>{{appState.appData.data.pacient.dataNasterii | date:'dd/MM/yyyy'}}</p>
+              </div>
+            </div>
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Sex</label>
+                <p>{{appState.appData.data.pacient.sex}}</p>
+              </div>
+            </div>
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Stare Civila</label>
+                <p>{{appState.appData.data.pacient.stareCivila}}</p>
+              </div>
+            </div>
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Telefon</label>
+                <p>{{appState.appData.data.pacient.nrTelefon}}</p>              
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="padding-left: 20px;">
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Adresa</label>
+                <p>{{appState.appData.data.pacient.adresa}}</p>
+              </div>
+            </div>  
+          </div>
+
+          <div class="row" style="padding-left: 20px;">
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Oras</label>
+                <p>{{appState.appData.data.pacient.oras}}</p>
+              </div>
+            </div>
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Judet</label>
+                <p>{{appState.appData.data.pacient.judet}}</p>
+              </div>
+            </div>
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Tara</label>
+                <p>{{appState.appData.data.pacient.tara}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="padding-left: 20px;">
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Antecedente</label>
+                <p>{{appState.appData.data.pacient.antecedente}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            
+            <p style="padding: 15px;font-size: large;font-weight: bold;">Persoana de Contact </p>
+          </div>
+
+          <div class="row" style="padding-left: 20px;">
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Nume și Prenume</label>
+                <p>{{appState.appData.data.pacient.persoanaContact}}</p>
+              </div>
+            </div>
+
+            <div style="padding-right: 100px;">
+              <div class="form-group">
+                <label>Telefon</label>
+                <p>{{appState.appData.data.pacient.telefonContact}}</p>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

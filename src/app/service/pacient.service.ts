@@ -19,6 +19,15 @@ export class PacientService {
         catchError(this.handleError)
     );
 
+    getPacient(id: any){
+    return <Observable<CustomResponse>>
+    this.http.get<CustomResponse>(`${this.apiUrl}/pacient/get/${id}`)
+    .pipe(
+        tap(console.log),
+        catchError(this.handleError)
+    );
+    }
+
     save(data: { cnp: any; nume: any; prenume: any; dataNasterii: any; sex: any; stareCivila: any; nrTelefon: any; adresa: any; 
         oras: any; judet: any; tara: any; antecedente: any; persoanaContact: any; telefonContact: any;}) : Observable<Pacient> {
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DataState } from 'app/enum/data-state.enum';
 import { AppState } from 'app/interface/app-state';
 import { CustomResponse } from 'app/interface/custom-response';
@@ -24,7 +25,7 @@ export class TableComponent implements OnInit{
   appState$: Observable<AppState<CustomResponse>>;
   readonly DataState = DataState;
   private dataSubject = new BehaviorSubject<CustomResponse>(null);
-  constructor(private pacientService: PacientService, private fb: FormBuilder) { 
+  constructor(private pacientService: PacientService, private fb: FormBuilder, private router: Router) { 
   }
 
 
@@ -39,6 +40,12 @@ export class TableComponent implements OnInit{
           return of({ dataState: DataState.ERROR_STATE, error });
         })
       );
+  }
+
+  getId(pacient: Pacient){
+    let route = '/pacientInfo';
+    this.router.navigate([route], { queryParams: { id: pacient.id } });
+
   }
   
 }

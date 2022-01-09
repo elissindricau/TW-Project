@@ -33,11 +33,11 @@
              </tr>
             </thead>
             <tbody *ngFor="let pacient of appState.appData.data.pacient; let i = index">
-              <tr>
+              <tr (click)="getId(pacient)">
                 <td>{{pacient.cnp}}</td>
                 <td>{{pacient.nume}}</td>
                 <td>{{pacient.prenume}}</td>
-                <td>{{pacient.dataNasterii |  date:'EEE'}}</td>
+                <td>{{pacient.dataNasterii |  date:'dd/MM/yyyy'}}</td>
                 <td>{{pacient.nrTelefon}}</td>
               </tr>
             </tbody>
