@@ -79,6 +79,10 @@
               </div>
             </div>
             
+            <div class="update ml-auto mr-auto" style="padding-top: 14px;">
+              <button style="width: 150px; text-align: center;" type="submit" id="registerBtn" class="btn btn-primary btn-round" (click)="saveUser(userForm)" [disabled]="!userForm.form.valid">Register</button>         
+            </div>
+
             <!-- <div class="column" style="width: 33%;">
               <div  class="col-md-12">
                 <div class="form-group">
@@ -88,15 +92,12 @@
               </div>
             </div> -->
           </div>
-        <div style="padding-top: 10px;padding-bottom: 15px;" class="row">
-          <div class="update ml-auto mr-auto">
-            <button style="width: 150px;" type="submit" id="registerBtn" class="btn btn-primary btn-round" (click)="saveUser(userForm)" [disabled]="!userForm.form.valid">Register</button>         
+          <div style="padding-top: 10px; padding-bottom: 15px; padding-left: 35%;" class="row">
+            <div class="text-center">
+              <p>Ai deja cont? <a style="color:#51cbce; font-weight:900; text-align: center;" routerLink="/login">Autentifica-te acum!</a></p>
+            </div>
           </div>
-          
-          <div class="text-center">
-            <p>Ai deja cont? <a style="color:#51cbce; font-weight:900;" routerLink="/login">Autentifica-te acum!</a></p>
-          </div>
-        </div>
+
       </form>
 
 

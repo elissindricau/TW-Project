@@ -8,7 +8,7 @@ import { tap, catchError, retry} from "rxjs/operators";
 @Injectable({ providedIn: 'root' })
 export class ConsultatieService {
 
-    private readonly apiUrl = 'http://localhost:8080';
+    private readonly apiUrl = 'http://localhost:8081';
 
     constructor(private http: HttpClient) {}
 
